@@ -1,0 +1,155 @@
+﻿html
+{
+    background-color:#ccc;
+} 
+table
+        {
+            margin-left:auto;
+            margin-right:auto;
+       }
+table tr td
+{
+  padding:3px;
+}
+ input[type=text]
+    {
+        border-radius:5px;
+        border:#ccc 1px solid;
+        width:240px;
+        height:28px;
+        padding:1px;
+    }
+
+   input[type="text"],input[type="password"] {
+        border: 1px solid #e2e2e2;
+        background: #fff;
+        color: #333;
+        font-size: 1.0em;
+        margin: 10px 0 6px 3px;
+        padding: 5px;
+        width: 250px;
+    }
+        input:focus, textarea:focus {
+            border: 1px solid #7ac0da;
+        }
+
+        input[type="checkbox"] {
+            background: transparent;
+            border: inherit;
+            width: auto;
+        }
+       textarea
+       {
+           width:200px;
+           height:71px;
+       } 
+    input[type="submit"],
+    input[type="button"],
+    button {
+        background-color: #d3dce0;
+        border: 1px solid #787878;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 7px;
+        margin-right: 8px;
+        }
+
+    td input[type="submit"],
+    td input[type="button"],
+    td button {
+        font-size: 1em;
+        padding: 4px;
+        margin-right: 25px;
+    }
+    #res{
+        margin-top:55px;
+    }
+    #bartop {
+border-top:2px solid gray;
+width:100%;
+}
+#res,#res1,#res2 {
+    border-bottom:2px solid gray;
+    width:100%;
+    margin-bottom: 48px;
+}
+
+#formulaire
+{
+    width:100%;
+    margin:0px auto;
+    background-color:#fff;
+    padding:10px;
+
+}
+   #btnNew
+   {
+       margin-bottom:3px;
+       margin-top:-10px;
+   }
+  #contact_four
+  {
+      border:1px solid gray;
+      font-size:15px;
+  }
+  /* login
+----------------------------------------------------------*/
+#login {
+    display: block;
+    font-size: .85em;
+    margin: 0 0 10px;
+    text-align: right;
+}
+
+    #login a {
+        background-color: #d3dce0;
+        margin-left: 10px;
+        margin-right: 3px;
+        padding: 2px 3px;
+        text-decoration: none;
+    }
+
+    #login a.username {
+        background: none;
+        margin-left: 0px;
+        text-decoration: underline;
+    }
+
+    #login ul {
+        margin: 0;
+    }
+
+    #login li {
+        display: inline;
+        list-style: none;
+    }
+.side-nav > li > ul > li > ul > li a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.image{
+    width:50px;
+    height:50px;
+}

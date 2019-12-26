@@ -1,0 +1,4 @@
+C:\Users\FR-PHILIPPE\Documents\Visual Studio 2015\Projects\Projet Valerio\ValerioWeb.Domaine\bin\Debug\ValerioWeb.Domaine.dll
+C:\Users\FR-PHILIPPE\Documents\Visual Studio 2015\Projects\Projet Valerio\ValerioWeb.Domaine\bin\Debug\ValerioWeb.Domaine.pdb
+C:\Users\FR-PHILIPPE\Documents\Visual Studio 2015\Projects\Projet Valerio\ValerioWeb.Domaine\obj\Debug\ValerioWeb.Domaine.dll
+C:\Users\FR-PHILIPPE\Documents\Visual Studio 2015\Projects\Projet Valerio\ValerioWeb.Domaine\obj\Debug\ValerioWeb.Domaine.pdb

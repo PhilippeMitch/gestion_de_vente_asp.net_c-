@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D44D596-1855-49C4-9BED-C6574A087909}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ValerioWeb.UI</RootNamespace>
+    <AssemblyName>ValerioWeb.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administrateur\HistoriqueUser.aspx" />
+    <Content Include="Administrateur\ListConnectionUser.aspx" />
+    <Content Include="Administrateur\ListeUser.aspx" />
+    <Content Include="Administrateur\AddUser.aspx" />
+    <Content Include="Administrateur\ModifierUser.aspx" />
+    <Content Include="Commercial\AddClient.aspx" />
+    <Content Include="Commercial\AddCommandeClient.aspx" />
+    <Content Include="Commercial\DescriptionCommande.aspx" />
+    <Content Include="Commercial\EnregistrerVente.aspx" />
+    <Content Include="Commercial\FormulaireLivraison.aspx" />
+    <Content Include="Commercial\ListeClient.aspx" />
+    <Content Include="Commercial\ListeCommandeClient.aspx" />
+    <Content Include="Commercial\ListerVente.aspx" />
+    <Content Include="Commercial\ModifierClient.aspx" />
+    <Content Include="Commercial\ModifierCommandeClient.aspx" />
+    <Content Include="Commercial\ModifierVente.aspx" />
+    <Content Include="Commercial\RechercherClient.aspx" />
+    <Content Include="Commercial\RechercherCommandeClient.aspx" />
+    <Content Include="Commercial\SupprimerClient.aspx" />
+    <Content Include="Commercial\SupprimerCommandeClient.aspx" />
+    <Content Include="Css\bootstrap.min.css" />
+    <Content Include="Css\font-awesome.min.css" />
+    <Content Include="Css\plugins\morris.css" />
+    <Content Include="Css\StyleForm.css" />
+    <Content Include="Css\sb-admin.css" />
+    <Content Include="Css\Style.css" />
+    <Content Include="Css\StyleFormulaire.css" />
+    <Content Include="Css\stylepage.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Directeur\AddDepotCategorieRayon.aspx" />
+    <Content Include="Directeur\AddFournisseur.aspx" />
+    <Content Include="Directeur\ListFournisseur.aspx" />
+    <Content Include="Directeur\ModifierFournisseur.aspx" />
+    <Content Include="Erreur.aspx" />
+    <Content Include="Essai.aspx" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\logo-00.png" />
+    <Content Include="Images\pb_icon_edit.png" />
+    <Content Include="Js\bootstrap.min.js" />
+    <Content Include="Js\jquery.js" />
+    <Content Include="Js\plugins\flot\excanvas.min.js" />
+    <Content Include="Js\plugins\flot\flot-data.js" />
+    <Content Include="Js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Js\plugins\morris\morris-data.js" />
+    <Content Include="Js\plugins\morris\morris.js" />
+    <Content Include="Js\plugins\morris\morris.min.js" />
+    <Content Include="Js\plugins\morris\raphael.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Magasinier\AchatArticle.aspx" />
+    <Content Include="Magasinier\ListerAchatArticle.aspx" />
+    <Content Include="Magasinier\ListerArticle.aspx" />
+    <Content Include="Magasinier\ModifierAchatArticle.aspx" />
+    <Content Include="Magasinier\ModifierArticle.aspx" />
+    <Content Include="Magasinier\RechercherAchatArticle.aspx" />
+    <Content Include="Magasinier\RechercherArticle.aspx" />
+    <Content Include="Magasinier\SupprimerAchatArticle.aspx" />
+    <Content Include="Magasinier\SupprimerArticle.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Model.Master" />
+    <Content Include="Login.Master" />
+    <Content Include="Commercial\Commercial.Master" />
+    <Content Include="Administrateur\Administrateur.Master" />
+    <Content Include="Directeur\ModelDirecteur.Master" />
+    <Content Include="Magasinier\MagasinierModel.Master" />
+    <Content Include="Responsable Commercial\AddLivraisonClient.aspx" />
+    <Content Include="Responsable Commercial\ListerLivraisonClient.aspx" />
+    <Content Include="Responsable Commercial\ModifierLivraisonClient.aspx" />
+    <Content Include="Responsable Commercial\ResponsableCommercial.Master" />
+    <Content Include="Responsable des Achats\ListerFactureAchat.aspx" />
+    <Content Include="Responsable des Achats\ModifierFactureAchat.aspx" />
+    <Content Include="Responsable des Achats\RechercherFactureAchat.aspx" />
+    <Content Include="Responsable des Achats\ResponsableAchatModel.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Responsable Commercial\FactureVente.aspx" />
+    <Content Include="Responsable Commercial\ListerFactureVente.aspx" />
+    <Content Include="Responsable Commercial\ModifierFactureVente.aspx" />
+    <Content Include="Responsable Commercial\RechercherFactureVente.aspx" />
+    <Content Include="Responsable Commercial\SupprimerFactureVente.aspx" />
+    <Content Include="Magasinier\AddArticle.aspx" />
+    <Content Include="Responsable des Achats\AddCommandeAchat.aspx" />
+    <Content Include="Responsable des Achats\FactureAchat.aspx" />
+    <Content Include="Responsable des Achats\ListerCommandeAchat.aspx" />
+    <Content Include="Responsable des Achats\ModifierCommandeAchat.aspx" />
+    <Content Include="Responsable des Achats\RechercherCommandeAchat.aspx" />
+    <Content Include="Responsable des Achats\SupprimerCommandeAchat.aspx" />
+    <Content Include="Responsable des Achats\SupprimerFactureAchat.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrateur\Administrateur.Master.cs">
+      <DependentUpon>Administrateur.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrateur\Administrateur.Master.designer.cs">
+      <DependentUpon>Administrateur.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Administrateur\HistoriqueUser.aspx.cs">
+      <DependentUpon>HistoriqueUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrateur\HistoriqueUser.aspx.designer.cs">
+      <DependentUpon>HistoriqueUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrateur\ListConnectionUser.aspx.cs">
+      <DependentUpon>ListConnectionUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrateur\ListConnectionUser.aspx.designer.cs">
+      <DependentUpon>ListConnectionUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrateur\ListeUser.aspx.cs">
+      <DependentUpon>ListeUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrateur\ListeUser.aspx.designer.cs">
+      <DependentUpon>ListeUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrateur\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrateur\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrateur\ModifierUser.aspx.cs">
+      <DependentUpon>ModifierUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrateur\ModifierUser.aspx.designer.cs">
+      <DependentUpon>ModifierUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\AddClient.aspx.cs">
+      <DependentUpon>AddClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\AddClient.aspx.designer.cs">
+      <DependentUpon>AddClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\AddCommandeClient.aspx.cs">
+      <DependentUpon>AddCommandeClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\AddCommandeClient.aspx.designer.cs">
+      <DependentUpon>AddCommandeClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\Commercial.Master.cs">
+      <DependentUpon>Commercial.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\Commercial.Master.designer.cs">
+      <DependentUpon>Commercial.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\DescriptionCommande.aspx.cs">
+      <DependentUpon>DescriptionCommande.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\DescriptionCommande.aspx.designer.cs">
+      <DependentUpon>DescriptionCommande.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\EnregistrerVente.aspx.cs">
+      <DependentUpon>EnregistrerVente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\EnregistrerVente.aspx.designer.cs">
+      <DependentUpon>EnregistrerVente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\FormulaireLivraison.aspx.cs">
+      <DependentUpon>FormulaireLivraison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\FormulaireLivraison.aspx.designer.cs">
+      <DependentUpon>FormulaireLivraison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\ListeClient.aspx.cs">
+      <DependentUpon>ListeClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\ListeClient.aspx.designer.cs">
+      <DependentUpon>ListeClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\ListeCommandeClient.aspx.cs">
+      <DependentUpon>ListeCommandeClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\ListeCommandeClient.aspx.designer.cs">
+      <DependentUpon>ListeCommandeClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\ListerVente.aspx.cs">
+      <DependentUpon>ListerVente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\ListerVente.aspx.designer.cs">
+      <DependentUpon>ListerVente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\ModifierClient.aspx.cs">
+      <DependentUpon>ModifierClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\ModifierClient.aspx.designer.cs">
+      <DependentUpon>ModifierClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\ModifierCommandeClient.aspx.cs">
+      <DependentUpon>ModifierCommandeClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\ModifierCommandeClient.aspx.designer.cs">
+      <DependentUpon>ModifierCommandeClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\ModifierVente.aspx.cs">
+      <DependentUpon>ModifierVente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\ModifierVente.aspx.designer.cs">
+      <DependentUpon>ModifierVente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\RechercherClient.aspx.cs">
+      <DependentUpon>RechercherClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\RechercherClient.aspx.designer.cs">
+      <DependentUpon>RechercherClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\RechercherCommandeClient.aspx.cs">
+      <DependentUpon>RechercherCommandeClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\RechercherCommandeClient.aspx.designer.cs">
+      <DependentUpon>RechercherCommandeClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\SupprimerClient.aspx.cs">
+      <DependentUpon>SupprimerClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\SupprimerClient.aspx.designer.cs">
+      <DependentUpon>SupprimerClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\SupprimerCommandeClient.aspx.cs">
+      <DependentUpon>SupprimerCommandeClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\SupprimerCommandeClient.aspx.designer.cs">
+      <DependentUpon>SupprimerCommandeClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directeur\AddDepotCategorieRayon.aspx.cs">
+      <DependentUpon>AddDepotCategorieRayon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directeur\AddDepotCategorieRayon.aspx.designer.cs">
+      <DependentUpon>AddDepotCategorieRayon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directeur\AddFournisseur.aspx.cs">
+      <DependentUpon>AddFournisseur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directeur\AddFournisseur.aspx.designer.cs">
+      <DependentUpon>AddFournisseur.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directeur\ListFournisseur.aspx.cs">
+      <DependentUpon>ListFournisseur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directeur\ListFournisseur.aspx.designer.cs">
+      <DependentUpon>ListFournisseur.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directeur\ModelDirecteur.Master.cs">
+      <DependentUpon>ModelDirecteur.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directeur\ModelDirecteur.Master.designer.cs">
+      <DependentUpon>ModelDirecteur.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Directeur\ModifierFournisseur.aspx.cs">
+      <DependentUpon>ModifierFournisseur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directeur\ModifierFournisseur.aspx.designer.cs">
+      <DependentUpon>ModifierFournisseur.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Erreur.aspx.cs">
+      <DependentUpon>Erreur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Erreur.aspx.designer.cs">
+      <DependentUpon>Erreur.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Essai.aspx.cs">
+      <DependentUpon>Essai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Essai.aspx.designer.cs">
+      <DependentUpon>Essai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Magasinier\AchatArticle.aspx.cs">
+      <DependentUpon>AchatArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Magasinier\AchatArticle.aspx.designer.cs">
+      <DependentUpon>AchatArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Magasinier\ListerAchatArticle.aspx.cs">
+      <DependentUpon>ListerAchatArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Magasinier\ListerAchatArticle.aspx.designer.cs">
+      <DependentUpon>ListerAchatArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Magasinier\ListerArticle.aspx.cs">
+      <DependentUpon>ListerArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Magasinier\ListerArticle.aspx.designer.cs">
+      <DependentUpon>ListerArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Magasinier\MagasinierModel.Master.cs">
+      <DependentUpon>MagasinierModel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Magasinier\MagasinierModel.Master.designer.cs">
+      <DependentUpon>MagasinierModel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Magasinier\ModifierAchatArticle.aspx.cs">
+      <DependentUpon>ModifierAchatArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Magasinier\ModifierAchatArticle.aspx.designer.cs">
+      <DependentUpon>ModifierAchatArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Magasinier\ModifierArticle.aspx.cs">
+      <DependentUpon>ModifierArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Magasinier\ModifierArticle.aspx.designer.cs">
+      <DependentUpon>ModifierArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Magasinier\RechercherAchatArticle.aspx.cs">
+      <DependentUpon>RechercherAchatArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Magasinier\RechercherAchatArticle.aspx.designer.cs">
+      <DependentUpon>RechercherAchatArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Magasinier\RechercherArticle.aspx.cs">
+      <DependentUpon>RechercherArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Magasinier\RechercherArticle.aspx.designer.cs">
+      <DependentUpon>RechercherArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Magasinier\SupprimerAchatArticle.aspx.cs">
+      <DependentUpon>SupprimerAchatArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Magasinier\SupprimerAchatArticle.aspx.designer.cs">
+      <DependentUpon>SupprimerAchatArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Magasinier\SupprimerArticle.aspx.cs">
+      <DependentUpon>SupprimerArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Magasinier\SupprimerArticle.aspx.designer.cs">
+      <DependentUpon>SupprimerArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Master.cs">
+      <DependentUpon>Model.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Model.Master.designer.cs">
+      <DependentUpon>Model.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responsable Commercial\AddLivraisonClient.aspx.cs">
+      <DependentUpon>AddLivraisonClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable Commercial\AddLivraisonClient.aspx.designer.cs">
+      <DependentUpon>AddLivraisonClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable Commercial\FactureVente.aspx.cs">
+      <DependentUpon>FactureVente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable Commercial\FactureVente.aspx.designer.cs">
+      <DependentUpon>FactureVente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable Commercial\ListerFactureVente.aspx.cs">
+      <DependentUpon>ListerFactureVente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable Commercial\ListerFactureVente.aspx.designer.cs">
+      <DependentUpon>ListerFactureVente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable Commercial\ListerLivraisonClient.aspx.cs">
+      <DependentUpon>ListerLivraisonClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable Commercial\ListerLivraisonClient.aspx.designer.cs">
+      <DependentUpon>ListerLivraisonClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable Commercial\ModifierFactureVente.aspx.cs">
+      <DependentUpon>ModifierFactureVente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable Commercial\ModifierFactureVente.aspx.designer.cs">
+      <DependentUpon>ModifierFactureVente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable Commercial\ModifierLivraisonClient.aspx.cs">
+      <DependentUpon>ModifierLivraisonClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable Commercial\ModifierLivraisonClient.aspx.designer.cs">
+      <DependentUpon>ModifierLivraisonClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable Commercial\RechercherFactureVente.aspx.cs">
+      <DependentUpon>RechercherFactureVente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable Commercial\RechercherFactureVente.aspx.designer.cs">
+      <DependentUpon>RechercherFactureVente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable Commercial\ResponsableCommercial.Master.cs">
+      <DependentUpon>ResponsableCommercial.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable Commercial\ResponsableCommercial.Master.designer.cs">
+      <DependentUpon>ResponsableCommercial.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable Commercial\SupprimerFactureVente.aspx.cs">
+      <DependentUpon>SupprimerFactureVente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable Commercial\SupprimerFactureVente.aspx.designer.cs">
+      <DependentUpon>SupprimerFactureVente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Magasinier\AddArticle.aspx.cs">
+      <DependentUpon>AddArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Magasinier\AddArticle.aspx.designer.cs">
+      <DependentUpon>AddArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable des Achats\AddCommandeAchat.aspx.cs">
+      <DependentUpon>AddCommandeAchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable des Achats\AddCommandeAchat.aspx.designer.cs">
+      <DependentUpon>AddCommandeAchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable des Achats\FactureAchat.aspx.cs">
+      <DependentUpon>FactureAchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable des Achats\FactureAchat.aspx.designer.cs">
+      <DependentUpon>FactureAchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable des Achats\ListerCommandeAchat.aspx.cs">
+      <DependentUpon>ListerCommandeAchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable des Achats\ListerCommandeAchat.aspx.designer.cs">
+      <DependentUpon>ListerCommandeAchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable des Achats\ListerFactureAchat.aspx.cs">
+      <DependentUpon>ListerFactureAchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable des Achats\ListerFactureAchat.aspx.designer.cs">
+      <DependentUpon>ListerFactureAchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable des Achats\ModifierCommandeAchat.aspx.cs">
+      <DependentUpon>ModifierCommandeAchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable des Achats\ModifierCommandeAchat.aspx.designer.cs">
+      <DependentUpon>ModifierCommandeAchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable des Achats\ModifierFactureAchat.aspx.cs">
+      <DependentUpon>ModifierFactureAchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable des Achats\ModifierFactureAchat.aspx.designer.cs">
+      <DependentUpon>ModifierFactureAchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable des Achats\RechercherCommandeAchat.aspx.cs">
+      <DependentUpon>RechercherCommandeAchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable des Achats\RechercherCommandeAchat.aspx.designer.cs">
+      <DependentUpon>RechercherCommandeAchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable des Achats\RechercherFactureAchat.aspx.cs">
+      <DependentUpon>RechercherFactureAchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable des Achats\RechercherFactureAchat.aspx.designer.cs">
+      <DependentUpon>RechercherFactureAchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable des Achats\ResponsableAchatModel.Master.cs">
+      <DependentUpon>ResponsableAchatModel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable des Achats\ResponsableAchatModel.Master.designer.cs">
+      <DependentUpon>ResponsableAchatModel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable des Achats\SupprimerCommandeAchat.aspx.cs">
+      <DependentUpon>SupprimerCommandeAchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable des Achats\SupprimerCommandeAchat.aspx.designer.cs">
+      <DependentUpon>SupprimerCommandeAchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Responsable des Achats\SupprimerFactureAchat.aspx.cs">
+      <DependentUpon>SupprimerFactureAchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Responsable des Achats\SupprimerFactureAchat.aspx.designer.cs">
+      <DependentUpon>SupprimerFactureAchat.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="fonts1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ValerioWeb.Controleur\ValerioWeb.Controleur.csproj">
+      <Project>{7d1b278f-2fa1-4db7-9c32-543661bd172c}</Project>
+      <Name>ValerioWeb.Controleur</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValerioWeb.Domaine\ValerioWeb.Domaine.csproj">
+      <Project>{8a4a66fb-1a0f-47ee-b23b-b927d0fa1c57}</Project>
+      <Name>ValerioWeb.Domaine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3847</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3847/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

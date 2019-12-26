@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ValerioCanezDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Personne">
+    <Key>
+      <PropertyRef Name="Id_Personne" />
+    </Key>
+    <Property Name="Id_Personne" Type="int" Nullable="false" />
+    <Property Name="Nom_Personne" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prenom_Personne" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sexe_Personne" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nif_Cin" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Date_Ajout" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="Id_Adresse" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ValerioCanezDBModelStoreContainer">
+    <EntitySet Name="Personne" EntityType="Self.Personne" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

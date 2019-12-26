@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Commercial.master.cs" Inherits="ValerioWeb.UI.Commercial.Commercial" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <!-- Css-->
+    <link href="../Css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../Css/sb-admin.css" rel="stylesheet" />
+   <link href="../Css/StyleFormulaire.css" rel="stylesheet" />
+    <link href="Css/StyleForm.css" rel="stylesheet" />
+    <!-- JavaScript -->
+    <script src="../Js/jquery.js"></script>
+    <script src="../Js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div id="wrapper">
+        <!-- Navigation -->
+	        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                <a class="navbar-brand" href="index.html">
+                        <asp:Image ID="img" runat="server" ImageUrl="~/Images/logo-00.png" Width="100px" heig="50px"/> </a>
+                     
+            	</div>
+                <!--  -->
+                
+	            <!-- Top Menu Items -->            	
+	              <ul class="nav navbar-right top-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
+                            <asp:Label ID="lbluser" runat="server" Text="*"></asp:Label>
+                            <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="divider"></li>
+                            <li>
+                                <asp:LinkButton ID="LinkButton1" OnClick="Deconnect_Click" ValidationGroup="deconect" runat="server"><i class="fa fa-fw fa-power-off"></i> Deconnecter</asp:LinkButton>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>	            	
+	            <!--  -->
+	            
+	            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->	       			
+	       		<div class="collapse navbar-collapse navbar-ex1-collapse">
+            
+	                <ul class="nav navbar-nav side-nav">
+	                	<li id="tour-2" class="navbar-minimize">
+		                	<a href="javascript:void(0);" title="Minimize sidebar">
+		                 		<i class="fa fa-home"> Acceuil</i>
+		                	</a>
+	        			</li>
+	                    
+                        <!-- Gestion Services -->
+	                    <li>
+	                       <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-globe"></i> Services <i class="fa fa-fw fa-caret-down"></i></a>
+	                        	<ul id="demo" class="collapse">
+                            <li>
+                                    <a href="javascript:;" data-toggle="collapse" data-target="#demo4"><i class="fa fa-shopping-cart"></i> Achat <i class="fa fa-fw fa-caret-down"></i></a>
+                                    <ul id="demo4" class="collapse" style="color: #FFFFFF; list-style: none;">
+                                        <li><a href="../Commercial/EnregistrerVente.aspx"><i class="fa fa-file"></i> Nouveau</a></li>
+                                        <li><a href="../Commercial/ModifierVente.aspx"><i class="fa fa-search "></i> Rechercher</a></li>
+                                        <li><a href="../Commercial/ModifierVente.aspx"><i class="fa fa-edit"></i> Modifier</a></li>
+                                        <li><a href="../Commercial/ListerVente.aspx"><i class="fa fa-list-alt"></i> Lister</a></li>
+                                    </ul>
+                                </li>
+                            <li>
+                                    <a href="javascript:;" data-toggle="collapse" data-target="#demo5"><i class="fa fa-fw fa-truck"></i> Livraison Client <i class="fa fa-fw fa-caret-down"></i></a>
+                                    <ul id="demo5" class="collapse" style="color: #FFFFFF; list-style: none;">
+                                        <li><a href="../Responsable Commercial/AddLivraisonClient.aspx"><i class="fa fa-file"></i> Nouveau</a></li>
+                                        <li><a href="../Responsable Commercial/ModifierLivraisonClient.aspx"><i class="fa fa-search "></i> Rechercher</a></li>
+                                        <li><a href="../Responsable Commercial/ModifierLivraisonClient.aspx"><i class="fa fa-edit"></i> Modifier</a></li>
+                                        <li><a href="../Responsable Commercial/ListerLivraisonClient.aspx"><i class="fa fa-list-alt"></i> Lister</a></li>
+                                    </ul>
+                                </li>
+                              <li>
+                                    <a href="javascript:;" data-toggle="collapse" data-target="#demo6"><i class="fa fa-pencil"></i> Commande Client <i class="fa fa-fw fa-caret-down"></i></a>
+                                    <ul id="demo6" class="collapse" style="color: #FFFFFF; list-style: none;">
+                                        <li><a href="Commercial/AddCommandeClient.aspx"><i class="fa fa-file"></i> Nouveau</a></li>
+                                        <li><a href="Commercial/ModifierCommandeClient.aspx"><i class="fa fa-search "></i> Rechercher</a></li>
+                                        <li><a href="Commercial/ModifierCommandeClient.aspx"><i class="fa fa-edit"></i> Modifier</a></li>
+                                        <li><a href="Commercial/ListeCommandeClient.aspx"><i class="fa fa-list-alt"></i> Lister</a></li>
+                                    </ul>
+                                </li>
+                        </ul>
+	                     </li>
+	                    
+	                    <li>
+	                        <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-area-chart"></i> <span class="name"> Statistiques<i class="fa fa-fw fa-caret-down"></i></span></a>
+	                   		 <ul aria-expanded="false" id="stats-collapse" class="panel-collapse collapse ">
+		                        <li class=""><a href="http://demo.flatlogic.com/3.2.1/transparent/stat_statistics.html"><i class="fa fa-shopping-cart"> </i> Vente</a></li>
+		                        <li class=""><a href="http://demo.flatlogic.com/3.2.1/transparent/stat_charts.html"><i class="fa fa-square"></i> Article</a></li>
+	                    	</ul>                  	
+	                    </li>
+	                    
+	                   <!--Geston fournisseur -->
+                        <li>
+                            <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-bookmark"></i><span class="name">Gestion Stock <i class="fa fa-fw fa-caret-down"></i></span></a>
+                            <ul style="height: 0px; list-style: none;" aria-expanded="false" id="forms-collapse" class="panel-collapse collapse">
+                                <li>
+                                    <a href="javascript:;" data-toggle="collapse" data-target="#demo3"><i class="fa fa-filter"></i> Article <i class="fa fa-fw fa-caret-down"></i></a>
+                                    <ul id="demo3" class="collapse" style="color: #FFFFFF; list-style: none;">
+                                        <li><a href="../Magasinier/AddArticle.aspx"><i class="fa fa-file"></i> Nouveau</a></li>
+                                        <li><a href="../Magasinier/RechercherArticle.aspx"><i class="fa fa-search "></i> Rechercher</a></li>
+                                        <li><a href="../Magasinier/ModifierArticle"><i class="fa fa-edit"></i> Modifier</a></li>
+                                        <li><a href="../Magasinier/ListArticle.aspx"><i class="fa fa-list-alt"></i> Lister</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-bookmark-o"></i>Emplacement <i class="fa fa-fw fa-caret-down"></i></a>
+                                    <ul id="demo1" class="collapse" style="color: #FFFFFF; list-style: none;">
+                                        <li><a href="../Directeur/AddDepotCategorierayon.aspx"><i class="fa fa-database"></i> Entrepot</a></li>
+                                        <li><a href="../Directeur/AddDepotCategorierayon.aspx"><i class="fa fa-envelope-o"></i> Categorie</a></li>
+                                        <li><a href="../Directeur/AddDepotCategorierayon.aspx"><i class="fa fa-columns"></i> Rayon</a></li>
+                                    </ul>
+                                </li>
+                                <li class=""><a href="AddFournisseur.aspx"><i class="fa fa-upload"></i> Rapprovisionnement</a></li>
+                                <li class=""><a href="ModifierFournisseur.aspx"><i class="fa fa-pencil"></i> Commande Article</a></li>
+                                <li>
+                                    <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-filter"></i>Fournisseur <i class="fa fa-fw fa-caret-down"></i></a>
+                                    <ul id="demo2" class="collapse" style="color: #FFFFFF; list-style: none;">
+                                        <li><a href="../Directeur/AddFournisseur.aspx"><i class="fa fa-file"></i> Nouveau</a></li>
+                                        <li><a href="../Directeur/ModifierFournisseur.aspx"><i class="fa fa-search "></i> Rechercher</a></li>
+                                        <li><a href="../Directeur/ModifierFournisseur.aspx"><i class="fa fa-edit"></i> Modifier</a></li>
+                                        <li><a href="../Directeur/ListFournisseur.aspx"><i class="fa fa-list-alt"></i> Lister</a></li>
+                                    </ul>
+                                </li>   
+                            </ul>
+                        </li>
+                        <!-- fin gestion forunisseur-->
+	                    
+                        <li>
+                            <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#grid-collapse"><i class="fa fa-th"></i><span class="name">Gestion Client <i class="fa fa-fw fa-caret-down"></i></span></a>
+                            <ul aria-expanded="false" id="grid-collapse" class="panel-collapse collapse ">
+                                <li>
+                                    <a href="javascript:;" data-toggle="collapse" data-target="#demo8"><i class="fa fa-user"></i> Client <i class="fa fa-fw fa-caret-down"></i></a>
+                                    <ul id="demo8" class="collapse" style="color: #FFFFFF; list-style: none;">
+                                        <li><a href="AddClient.aspx"><i class="fa fa-file"></i> Nouveau</a></li>
+                                        <li><a href="RechercherClient.aspx"><i class="fa fa-search "></i> Rechercher</a></li>
+                                        <li><a href="ModifierClient.aspx"><i class="fa fa-edit"></i> Modifier</a></li>
+                                        <li><a href="ListeClient.aspx"><i class="fa fa-list-alt"></i> Lister</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+	                    
+                        <!-- Gestion user -->
+	                    <li>
+	                        <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-cog"></i> <span class="name">Administration <i class="fa fa-fw fa-caret-down"></i></span></a>
+	                    	<ul aria-expanded="false" id="tables-collapse" class="panel-collapse collapse ">
+                                <li>
+                                    <a href="javascript:;" data-toggle="collapse" data-target="#demo9"><i class="fa fa-user"></i> Utilisateur <i class="fa fa-fw fa-caret-down"></i></a>
+                                    <ul id="demo9" class="collapse" style="color: #FFFFFF; list-style: none;">
+                                        <li><a href="../Administrateur/AddUser.aspx"><i class="fa fa-file"></i> Nouveau</a></li>
+                                        <li><a href="../Administrateur/ModifierUser.aspx"><i class="fa fa-search "></i> Rechercher</a></li>
+                                        <li><a href="../Administrateur/ModifierUser.aspx"><i class="fa fa-edit"></i> Modifier</a></li>
+                                        <li><a href="../Administrateur/ListeUser.aspx"><i class="fa fa-list-alt"></i> Lister</a></li>
+                                    </ul>
+                                </li>
+                                <li class=""><a href="../Administrateur/HistoriqueUser.aspx"><i class="fa fa-list-alt"></i> Historique</a></li>
+                                <li class=""><a href="../Administrateur/ListConnectionUser.aspx"><i class="fa fa-unlock-alt"></i> Liste Connexion</a></li>
+                            </ul>
+	                    </li>
+	                   
+	              </ul>
+	                 
+	            </div>
+	            <!-- /.navbar-collapse -->
+	            
+	        </nav>
+
+        <div id="page-wrapper">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </div>
+        
+    </div>
+    </form>
+</body>
+</html>

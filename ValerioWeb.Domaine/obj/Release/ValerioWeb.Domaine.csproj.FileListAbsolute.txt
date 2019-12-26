@@ -1,0 +1,4 @@
+C:\Users\FR-PHILIPPE\Documents\Visual Studio 2015\Projects\Projet Valerio\ValerioWeb.Domaine\bin\Release\ValerioWeb.Domaine.dll
+C:\Users\FR-PHILIPPE\Documents\Visual Studio 2015\Projects\Projet Valerio\ValerioWeb.Domaine\bin\Release\ValerioWeb.Domaine.pdb
+C:\Users\FR-PHILIPPE\Documents\Visual Studio 2015\Projects\Projet Valerio\ValerioWeb.Domaine\obj\Release\ValerioWeb.Domaine.dll
+C:\Users\FR-PHILIPPE\Documents\Visual Studio 2015\Projects\Projet Valerio\ValerioWeb.Domaine\obj\Release\ValerioWeb.Domaine.pdb

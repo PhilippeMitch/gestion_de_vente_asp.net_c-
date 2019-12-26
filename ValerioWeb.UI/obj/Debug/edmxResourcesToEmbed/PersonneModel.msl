@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ValerioCanezDBModelStoreContainer" CdmEntityContainer="ValerioCanezDBEntities">
+    <EntitySetMapping Name="Personnes">
+      <EntityTypeMapping TypeName="ValerioCanezDBModel.Personne">
+        <MappingFragment StoreEntitySet="Personne">
+          <ScalarProperty Name="Id_Personne" ColumnName="Id_Personne" />
+          <ScalarProperty Name="Nom_Personne" ColumnName="Nom_Personne" />
+          <ScalarProperty Name="Prenom_Personne" ColumnName="Prenom_Personne" />
+          <ScalarProperty Name="Sexe_Personne" ColumnName="Sexe_Personne" />
+          <ScalarProperty Name="Nif_Cin" ColumnName="Nif_Cin" />
+          <ScalarProperty Name="Date_Ajout" ColumnName="Date_Ajout" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Id_Adresse" ColumnName="Id_Adresse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

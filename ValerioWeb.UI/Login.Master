@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="ValerioWeb.UI.Login1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Css/Style.css" rel="stylesheet" />
+    <link href="../Css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Css/font-awesome.min.css" rel="stylesheet" /> 
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="form-group">
+            <div id="Tete">
+                <asp:ContentPlaceHolder runat="server" ID="Header" />
+            </div>
+
+            <div id="Corps">
+                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+            </div>
+
+            <div id="Footer">
+                <asp:ContentPlaceHolder runat="server" ID="Foot" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
